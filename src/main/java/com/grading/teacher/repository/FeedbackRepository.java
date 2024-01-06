@@ -6,4 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 // FeedbackRepository.java
 public interface FeedbackRepository extends JpaRepository<Feedback, Long> {
     // Add custom queries if needed
+
 }
