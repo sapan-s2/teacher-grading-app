@@ -21,7 +21,7 @@ public class FeedbackService {
     }
 
     // Implement feedback-related services
-    public void saveFeedback(Feedback feedback) {
+    public Feedback saveFeedback(Feedback feedback) {
 //        Teacher teacher      = teacherService.getTeacherById(feedbackRequest.getTeacherId());
 //        User user = userService.getUserById(feedbackRequest.getUserId());
 //        FeedbackForm feedbackForm = feedbackFormService.getFeedbackFormById(feedbackRequest.getFormId());
@@ -36,7 +36,8 @@ public class FeedbackService {
 //        feedback.setTimestamp(LocalDateTime.now());
 
         // Save the feedback to the database
-        feedbackRepository.save(feedback);
+        Feedback save = feedbackRepository.save(feedback);
+        return  save;
     }
 
 }

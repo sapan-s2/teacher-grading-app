@@ -1,8 +1,8 @@
 
-<div>
+<div >
 <h1>Teacher Feedback</h1>
-
-<form id="feedbackForm" (submit)="onSubmitFeedback()">
+<div *ngIf="show"> Feedback Successfully Submitted</div>
+<form *ngIf="!show" id="feedbackForm" (submit)="onSubmitFeedback()" >
     <label for="teacher">Select Teacher:</label>
     <select id="teacher" name="teacher" required>
         <!-- Populate this dropdown dynamically with teacher names from your backend -->

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import {FeedbackData} from "../model/FeedbackData";
 
 @Injectable({
   providedIn: 'root'
@@ -11,12 +12,7 @@ export class FeedbackService {
 
   constructor(private httpClient: HttpClient) { }
 
-  submitFeedback(feedbackData: any): Observable<any> {
-    // Set headers if needed (e.g., content type, authorization)
-    const headers = new HttpHeaders({
-      'Content-Type': 'application/json'
-    });
-
-    return this.httpClient.post<any>(this.apiUrl, feedbackData, { headers });
+  submitFeedback(feedbackData: FeedbackData ) {
+      return this.httpClient.post(this.apiUrl, feedbackData, );
   }
 }

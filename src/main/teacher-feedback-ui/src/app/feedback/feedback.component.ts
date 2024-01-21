@@ -9,7 +9,7 @@ import {TeacherData} from "../model/TeacherData";
   styleUrls: ['./feedback.component.css']
 })
 export class FeedbackComponent implements OnInit {
-
+  show: boolean = false
   feedback : FeedbackData; // Initialize with your form fields
   teacher : TeacherData; // Initialize with your form fields
 
@@ -28,6 +28,8 @@ export class FeedbackComponent implements OnInit {
         .subscribe(
             response => {
               console.log('Feedback submitted successfully:', response);
+              this.show= true
+                console.log('show flag:', this.show);
               // Handle success, e.g., show a success message
             },
             error => {
@@ -35,5 +37,6 @@ export class FeedbackComponent implements OnInit {
               // Handle error, e.g., show an error message
             }
         );
+
   }
 }
