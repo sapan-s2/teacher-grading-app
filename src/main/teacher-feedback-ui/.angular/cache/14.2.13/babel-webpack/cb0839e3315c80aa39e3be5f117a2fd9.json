@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class TeacherData {\n  constructor(id, firstName, lastName, email) {\n    this.id = id;\n    this.firstName = firstName;\n    this.lastName = lastName;\n    this.email = email;\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

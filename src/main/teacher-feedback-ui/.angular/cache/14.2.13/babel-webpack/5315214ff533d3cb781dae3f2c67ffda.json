@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class FeedbackData {\n  constructor(teacher, user, form, rating, comment) {\n    this.teacher = teacher;\n    this.user = user;\n    this.form = form;\n    this.rating = rating;\n    this.comment = comment;\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

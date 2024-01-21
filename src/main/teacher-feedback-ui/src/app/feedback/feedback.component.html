@@ -1,0 +1,30 @@
+
+<div>
+<h1>Teacher Feedback</h1>
+
+<form id="feedbackForm" (submit)="onSubmitFeedback()">
+    <label for="teacher">Select Teacher:</label>
+    <select id="teacher" name="teacher" required>
+        <!-- Populate this dropdown dynamically with teacher names from your backend -->
+        <option value="1">John Doe</option>
+        <option value="2">Jane Smith</option>
+        <!-- Add more options as needed -->
+    </select>
+
+    <label for="rating">Rate the Teacher:</label>
+    <input type="number" id="rating" name="rating" min="1" max="5" required [(ngModel)]="feedback.rating">
+
+    <label for="review">Write a Review:</label>
+    <textarea id="review" name="review" rows="4" required [(ngModel)]="feedback.comment"></textarea>
+
+<!--    <label for="feedbackForm">Feedback Form:</label>-->
+<!--    <select id="feedbackForm" name="feedbackForm" required>-->
+<!--        &lt;!&ndash; Populate this dropdown dynamically with feedback form names from your backend &ndash;&gt;-->
+<!--        <option value="1">Form 1</option>-->
+<!--        <option value="2">Form 2</option>-->
+<!--        &lt;!&ndash; Add more options as needed &ndash;&gt;-->
+<!--    </select>-->
+
+    <button type="submit">Submit Feedback</button>
+</form>
+</div>

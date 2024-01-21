@@ -25,7 +25,7 @@ public class Feedback {
     @JoinColumn(name = "form_id")
     private FeedbackForm form;
 
-    @ManyToOne
+    @ManyToOne()
     @JoinColumn(name = "teacher_id")
     private Teacher teacher;
 

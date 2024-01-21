@@ -1,95 +1,44 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Teacher Feedback</title>
-  <!-- Add your CSS stylesheets or link to a CSS framework (e.g., Bootstrap) here -->
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-    }
 
-    h1 {
-      text-align: center;
-      color: #333;
-    }
+<!--<h1>Teacher Feedback</h1>-->
 
-    form {
-      max-width: 600px;
-      margin: auto;
-    }
+<!--<form id="feedbackForm">-->
+<!--  <label for="teacher">Select Teacher:</label>-->
+<!--  <select id="teacher" name="teacher" required>-->
+<!--    &lt;!&ndash; Populate this dropdown dynamically with teacher names from your backend &ndash;&gt;-->
+<!--    <option value="1">John Doe</option>-->
+<!--    <option value="2">Jane Smith</option>-->
+<!--    &lt;!&ndash; Add more options as needed &ndash;&gt;-->
+<!--  </select>-->
 
-    label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: bold;
-    }
+<!--  <label for="rating">Rate the Teacher:</label>-->
+<!--  <input type="number" id="rating" name="rating" min="1" max="5" required>-->
 
-    input, select, textarea {
-      width: 100%;
-      padding: 8px;
-      margin-bottom: 16px;
-      box-sizing: border-box;
-    }
+<!--  <label for="review">Write a Review:</label>-->
+<!--  <textarea id="review" name="review" rows="4" required></textarea>-->
 
-    button {
-      background-color: #4CAF50;
-      color: white;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
+<!--  <label for="feedbackForm">Feedback Form:</label>-->
+<!--  <select id="feedbackForm" name="feedbackForm" required>-->
+<!--    &lt;!&ndash; Populate this dropdown dynamically with feedback form names from your backend &ndash;&gt;-->
+<!--    <option value="1">Form 1</option>-->
+<!--    <option value="2">Form 2</option>-->
+<!--    &lt;!&ndash; Add more options as needed &ndash;&gt;-->
+<!--  </select>-->
 
-    button:hover {
-      background-color: #45a049;
-    }
-  </style>
-</head>
-<body>
+<!--  <button type="submit">Submit Feedback</button>-->
+<!--</form>-->
 
-<h1>Teacher Feedback</h1>
-
-<form id="feedbackForm">
-  <label for="teacher">Select Teacher:</label>
-  <select id="teacher" name="teacher" required>
-    <!-- Populate this dropdown dynamically with teacher names from your backend -->
-    <option value="1">John Doe</option>
-    <option value="2">Jane Smith</option>
-    <!-- Add more options as needed -->
-  </select>
-
-  <label for="rating">Rate the Teacher:</label>
-  <input type="number" id="rating" name="rating" min="1" max="5" required>
-
-  <label for="review">Write a Review:</label>
-  <textarea id="review" name="review" rows="4" required></textarea>
-
-  <label for="feedbackForm">Feedback Form:</label>
-  <select id="feedbackForm" name="feedbackForm" required>
-    <!-- Populate this dropdown dynamically with feedback form names from your backend -->
-    <option value="1">Form 1</option>
-    <option value="2">Form 2</option>
-    <!-- Add more options as needed -->
-  </select>
-
-  <button type="submit">Submit Feedback</button>
-</form>
-
-<script>
-  // Add JavaScript logic to handle form submission, e.g., using AJAX to send data to the backend
-  document.getElementById('feedbackForm').addEventListener('submit', function (event) {
-    event.preventDefault();
-    // Add your AJAX code here to send feedback data to the backend
-    console.log('Feedback submitted!');
-  });
-</script>
-
-</body>
-</html>
+<!--<script>-->
+<!--  // Add JavaScript logic to handle form submission, e.g., using AJAX to send data to the backend-->
+<!--  document.getElementById('feedbackForm').addEventListener('submit', function (event) {-->
+<!--    event.preventDefault();-->
+<!--    // Add your AJAX code here to send feedback data to the backend-->
+<!--    console.log('Feedback submitted!');-->
+<!--  });-->
+<!--</script>-->
+<div>
+<router-outlet></router-outlet>
+</div>
 
 
 <!--&lt;!&ndash; * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * &ndash;&gt;-->
