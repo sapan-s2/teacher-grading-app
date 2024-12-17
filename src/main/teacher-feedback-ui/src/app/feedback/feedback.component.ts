@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FeedbackService} from "../service/feedback.service";
 import {FeedbackData} from "../model/FeedbackData";
 import {TeacherData} from "../model/TeacherData";
+import {UserData} from "../model/UserData";
 
 @Component({
   selector: 'app-feedback',
@@ -12,10 +13,12 @@ export class FeedbackComponent implements OnInit {
   show: boolean = false
   feedback : FeedbackData; // Initialize with your form fields
   teacher : TeacherData; // Initialize with your form fields
+  user : UserData; // Initialize with your form fields
 
   constructor(private feedbackService: FeedbackService) {
       this.teacher = new TeacherData("1","","","")  // modify this value if you want to insert a record
-      this.feedback = new FeedbackData(this.teacher,null,null,"","");
+      this.user = new UserData("1");
+      this.feedback = new FeedbackData(this.teacher,this.user,null,"","");
       // this.feedback.teacher.id=2; // modify this value if you want to insert a record
   }
 
